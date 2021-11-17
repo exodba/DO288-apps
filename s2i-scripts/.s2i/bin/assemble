@@ -11,7 +11,10 @@ config_s2i
 ######## CUSTOMIZATION STARTS HERE ############
 
 echo "---> Installing application source"
+cp -af /tmp/src ./
 
+echo "--> Installing the info page"
+echo "Page was create on $DATE" > ./info.html
 
 ######## CUSTOMIZATION ENDS HERE ############
 
