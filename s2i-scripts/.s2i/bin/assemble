@@ -9,6 +9,17 @@ echo "---> Enabling s2i support in httpd24 image"
 config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
+echo "----> copying the index.html to ./"
+cp -Rf /tmp/src/*html ./
+
+echo " setting up the date "
+
+DATE=`date "+%Y-%m-%d"`
+echo $DATE
+
+echo "populating the date in the info.html"
+echo "Page was pupulated on $DATE" > ./info.html
+echo "jkdj  ikjk kkj " >> ./info.html
 
 
 
